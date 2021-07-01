@@ -1,0 +1,39 @@
+<div class="container">
+
+    <form (ngSubmit)="insertData()" [formGroup]="form">
+        <div class="form-group">
+            <label for="accountNumber">Account Number</label>
+            <input type="number" formControlName="accountNumber" class="form-control" placeholder="Enter account number">
+        </div>
+
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" formControlName="amount" class="form-control" placeholder="Enter transaction amount">
+        </div>
+
+        <div class="form-group">
+            <label for="transactionType">Transaction Type</label>
+            <input type="text" formControlName="transactionType" class="form-control" placeholder="deposit | withdrawal | loan">
+        </div>
+
+        <div class="form-group">
+            <label for="transactionDate">Transaction Date</label>
+            <input type="date" formControlName="transactionDate" class="form-control" placeholder="Enter transaction date">
+        </div>
+
+        <div class="form-group">
+            <label for="interestRate">Interest Rate</label>
+            <input type="number" formControlName="interestRate" class="form-control" placeholder="Enter loan interest rate if this is a loan">
+        </div>
+
+        <div class="form-group">
+            <label for="numberOfPayments">Number of loan payments</label>
+            <input type="number" formControlName="numberOfPayments" class="form-control" placeholder="Enter number of loan payments">
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-dark btn-sm">Submit</button>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,36 @@
+<div>
+    <p>sample acounts to test 1111111, 123456, 123459, 123457, 123458</p>
+    <p><input type="number" id="accountNumber" name="accountNumber" [(ngModel)]="accountNumber"></p>
+    <h1> {{accountNumber}}</h1>
+
+    <button type="button" (click)="findAccount()">Find Account</button>
+
+    <div class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Account Number</th>
+                <th scope="col">Type</th>
+                <th scope="col">Amount </th>
+                <th scope="col">Date</th>
+                <th scope="col">loan payment</th>
+                <th scope="col">loan term</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let account of accounts; let i = index">
+                <td>{{ i+1 }}</td>
+                <td>{{ account.accountNumber }}</td>
+                <td>{{ account.transactionType }}</td>
+                <td>{{ account.amount }}</td>
+                <td>{{ account.transactionDate }}</td>
+                <td>{{ account.interestRate }}</td>
+                <td>{{ account.numberOfPayments }}</td>
+
+
+
+            </tr>
+        </tbody>
+    </div>
+</div>
